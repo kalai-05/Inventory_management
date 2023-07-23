@@ -107,15 +107,35 @@ public class Menu extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Kannada MN", 1, 14)); // NOI18N
         jButton5.setText("Allocate Employees ");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Kannada MN", 1, 14)); // NOI18N
         jButton6.setText("Monthly Reports ");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setFont(new java.awt.Font("Kannada MN", 1, 14)); // NOI18N
         jButton7.setText("Send notification customer ");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setFont(new java.awt.Font("Kannada MN", 1, 14)); // NOI18N
         jButton8.setText("Send notification Employee");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -197,7 +217,6 @@ public class Menu extends javax.swing.JFrame {
                  // TODO add your handling code here:
                  customer cus= new customer();
                  cus.show();
-                 
                  dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -223,6 +242,37 @@ public class Menu extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        
+        AllocateEmployees A =new AllocateEmployees();
+        A.show();
+        dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        
+        CustomerMail C = new CustomerMail();
+        C.show();
+        dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        
+        EmployeeMail E=new EmployeeMail();
+        E.show();
+        dispose();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        MonthlyReports M=new MonthlyReports();
+        M.show();
+        dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments

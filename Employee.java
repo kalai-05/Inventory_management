@@ -322,7 +322,7 @@ public class Employee extends javax.swing.JFrame {
              txtid.requestFocus();
             
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(customer.class.getName()).log(Level.SEVERE, null, ex);
+           JOptionPane.showMessageDialog(rootPane, "Enter Uniqu  Emplooyee ID ? ", "Alert", 1);
                
         }
         
@@ -357,7 +357,7 @@ public class Employee extends javax.swing.JFrame {
   
              Class.forName("com.mysql.cj.jdbc.Driver");
              con = DriverManager.getConnection("jdbc:mysql://localhost:3308/MYSHARE","root","");
-             insert = con.prepareStatement("update employeeData set  EmpName= ?,EmpMail= ?,EmpNum= ?,EmpSalary=?,where EmpID= ?");
+             insert = con.prepareStatement("update employeeData set  EmpName= ?,EmpMail= ?,EmpNum= ?,EmpSalary=? where EmpID= ?");
              
              insert.setString(1,EmpName);
              insert.setString(2,EmpMail);
@@ -377,6 +377,8 @@ public class Employee extends javax.swing.JFrame {
              txtid.requestFocus();
     
 } catch (ClassNotFoundException | SQLException ex) {
+    ex.printStackTrace();
+    // JOptionPane.showMessageDialog(rootPane, "Select The Emplooyee ID ? ", "Warning", 2);
    
 }
         
